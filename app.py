@@ -68,7 +68,7 @@ if check_password():
     # Selecionar ou criar categoria
     st.subheader('Categorias de Checklist')
     categorias = list(st.session_state.categories.keys())
-    categoria = st.selectbox('Selecione uma categoria', categorias + ['+ Nova categoria'])
+    categoria = st.selectbox('', categorias + ['+ Nova categoria'], label_visibility='collapsed')
     if categoria == '+ Nova categoria':
         nova_categoria = st.text_input('Nome da nova categoria')
         if st.button('Criar categoria') and nova_categoria.strip():
